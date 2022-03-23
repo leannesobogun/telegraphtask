@@ -6,3 +6,9 @@ textarea {
 .border {
     border-radius: 
 }
+
+form {
+    position: absolute;
+    left: 50vw;
+    transform: translate(-50%, 50%);
+}
