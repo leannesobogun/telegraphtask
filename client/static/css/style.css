@@ -3,7 +3,7 @@ input, textarea {
     outline: none;
 }
 
-form {
+form, #storyContainer {
     display: grid;
     justify-content: center;
     margin-top: 60px;
@@ -20,4 +20,15 @@ input[id^="titleBox"]::-webkit-input-placeholder {
 
 input[id^="titleBox"]::-webkit-input-placeholder {
     
+}
+
+#returnText {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: inline;
+}
+
+body {
+    margin: 0;
 }

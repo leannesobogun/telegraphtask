@@ -8,13 +8,13 @@ app.use(express.json());
 //const { Client } = require('pg')
 //const client = new Client()
 app.use(express.urlencoded({ extended: true }));
+app.set("view engine", "ejs");
 
-const port = 3000;
 app.use(express.static(path.join(__dirname, "./public")));
 const storyRoutes = require("./routes/story");
 app.route("/").get((req, res) => {res.send("This is our amazing API")});
 app.use("/story", storyRoutes);
 
-app.listen(port, () => {
-  console.log(`Telegraph app listening on port ${port}`);
+app.listen(process.env.PORT, () => {
+  console.log(`Telegraph app listening on port ${process.env.PORT}`);
 });

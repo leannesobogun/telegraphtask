@@ -2,7 +2,7 @@
   "description": "Telegraph App Task",
   "scripts": {
     "start": "node index.js",
-    "dev": "nodemon index.js",
+    "dev": "nodemon --legacy-watch index.js",
     "seedDev": "node dbConfig/seedDev.js"
   },
   "jest": {
