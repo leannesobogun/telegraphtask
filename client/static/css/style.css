@@ -1,3 +1,20 @@
+
+/*input[id^="titleBox"]::-webkit-input-placeholder {
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+    font-size: 35px;
+}
+
+input[id^="nameBox"]::-webkit-input-placeholder {
+    font-family: "Lucida Console", "Courier New", monospace;
+}
+
+input[id^="storyBox"]::-webkit-input-placeholder {
+    font-size: 50px;
+    font-family:'Times New Roman', Times, serif;
+    
+} */
+
+
 input, textarea {
     border: none;
     outline: none;
@@ -6,17 +23,21 @@ input, textarea {
 form, #storyContainer {
     display: grid;
     justify-content: center;
-    margin-top: 60px;
+    margin-top: 40px;
     text-align: center;
 }
 
-input[id^="titleBox"]::-webkit-input-placeholder {
-    font-family: 'IBM Plex Sans Arabic', sans-serif;
-    font-size: xx-large;
+.text {
+    padding-top: 10px;
 }
 
-input[id^="titleBox"]::-webkit-input-placeholder {
-    
+.titleContent {
+    font-size: 35px;
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+}
+
+.nameContent {
+    font-family: "Lucida Console", "Courier New", monospace;
 }
 
 input[id^="titleBox"]::-webkit-input-placeholder {
@@ -33,3 +54,12 @@ input[id^="titleBox"]::-webkit-input-placeholder {
 body {
     margin: 0;
 }
+.storyContent {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+}
+
+#pubButton {
+    font-weight: 900;
+} /* the aim of this is to make the button font bolder, however in the inspect, the button class keeps overriding the font-weight and is automatically
+set to being cancelled out.*/
