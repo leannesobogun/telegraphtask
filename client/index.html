@@ -9,11 +9,20 @@
     <title>Telegraph</title>
 </head>
 <body>
-    <form class="justify-content-center" action="/new">
-        <div><textarea placeholder="Title"></textarea></div><br>
-        <div><textarea placeholder="Your name"></textarea></div><br>
-        <div><textarea placeholder="Your story..."></textarea></div><br>
-        <button type="submit" class="btn btn-outline-dark rounded-pill border">Publish</button>
+<form action="/new">
+ <div class="container">
+        <div class="row">
+          <div class="col">
+            <div><input placeholder="Title"></div>
+            <div><input placeholder="Your name"></div>
+            <div><textarea placeholder="Your story..."></textarea></div>
+          </div>
+          <div class="col">
+            <button type="submit" class="btn btn-sm btn-outline-dark border border-5">PUBLISH</button>
+          </div>
+        </div>
+        </div>
     </form>
+   
 </body>
 </html>

@@ -1,14 +1,10 @@
-textarea {
+input, textarea {
     border: none;
     outline: none;
 }
 
-.border {
-    border-radius: 
-}
-
 form {
-    position: absolute;
-    left: 50vw;
-    transform: translate(-50%, 50%);
+    display: grid;
+    justify-content: center;
+    margin-top: 60px;
 }
