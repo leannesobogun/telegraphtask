@@ -9,6 +9,7 @@
   },
   "scripts": {
     "start": "node server.js",
-    "dev": "bash _scripts/startDev.sh"
+    "dev": "bash _scripts/startDev.sh",
+    "teardown": "bash _scripts/teardown.sh"
   }
 }

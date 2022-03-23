@@ -12,6 +12,7 @@ app.use(express.urlencoded({ extended: true }));
 const port = 3000;
 app.use(express.static(path.join(__dirname, "./public")));
 const storyRoutes = require("./routes/story");
+app.route("/").get((req, res) => {res.send("This is our amazing API")});
 app.use("/story", storyRoutes);
 
 app.listen(port, () => {
