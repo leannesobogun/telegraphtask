@@ -8,3 +8,16 @@ form {
     justify-content: center;
     margin-top: 60px;
 }
+
+input[id^="ttl"]::-webkit-input-placeholder {
+    font-family: 'IBM Plex Sans Arabic', sans-serif;
+    font-size: xx-large;
+}
+
+input[id^="ttl"]::-webkit-input-placeholder {
+    
+}
+
+input[id^="ttl"]::-webkit-input-placeholder {
+    
+}
