@@ -11,12 +11,8 @@ app.use(express.urlencoded({ extended: true }));
 
 const port = 3000;
 app.use(express.static(path.join(__dirname, "./public")));
-//app
-//	.route("/new")
-//	.post(async (req, res) => {
-//		res = await client.query('SELECT $1::text as message', ['Hello world!'])
-//		console.log(res.rows[0].message) // Hello world!
-//	});
+const storyRoutes = require("./routes/story");
+app.use("/story", storyRoutes);
 
 app.listen(port, () => {
   console.log(`Telegraph app listening on port ${port}`);
