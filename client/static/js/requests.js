@@ -1,19 +1,10 @@
 const protocol = window.location.protocol;
 const host = window.location.host;
+const hostname = window.location.hostname;
 
-async function getAll(category){
+async function getStory(id) {
     try {
-        const response = await fetch(`http://localhost:3000/${category}`);
-        const data = await response.json()
-        return data;
-    } catch (err) {
-        console.warn(err);
-    }
-}
-
-async function getItem(category, id) {
-    try {
-        const response = await fetch(`http://localhost:3000/${category}/${id}`);
+        const response = await fetch(`${protocol}//${hostname}:3000/story/${id}`);
         const data = await response.json();
         return data;
     } catch (err) {
@@ -21,37 +12,23 @@ async function getItem(category, id) {
     }
 }
 
-async function postStory(e){
-    e.preventDefault();
+async function postStory(title, name, story){
     try {
         const options = {
             method: 'POST',
             headers: { "Content-Type": "application/json" },
-            body: JSON.stringify(Object.fromEntries(new FormData(e.target)))
+            body: JSON.stringify({title: title, name: name, story: story})
         }
         
-        const response = await fetch(`${protocol}//${host}/story`, options);
+        const response = await fetch(`${protocol}//${hostname}:3000/story`, options);
         const { id, err } = await response.json();
         if(err) { 
             throw Error(err) 
         } else {
-            window.location.href = `${protocol}//${host}/story/${id}`
+            window.location.href = `${protocol}//${host}/story?id=${id}`
         }
     } catch (err) {
         console.warn(err);
     }
 }
 
-async function deleteBook(id){
-    try {
-        const options = { method: 'DELETE' }
-        await fetch(`http://localhost:3000/books/${id}`, options);
-        window.location.hash = `#books`
-    } catch (err) {
-        console.warn(err);
-    }
-}
-
-document.querySelector("#submitButton").addEventListener('click', e => {
-    postStory(e);
-});

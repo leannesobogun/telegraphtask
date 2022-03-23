@@ -3,7 +3,8 @@ const db = require('../dbConfig/init');
 async function createNewStory(req, res) {
   try {
     const insertedStory = await db.query("INSERT INTO stories (title, name, story) VALUES ($1, $2, $3) RETURNING *;", [req.body.title, req.body.name, req.body.story]);
-    res.send({id: insertedStory.id})
+    console.log(`Making new story with ID ${insertedStory.rows[0].id}`)
+    res.send({id: insertedStory.rows[0].id})
   } catch (err) {
     console.error(err);
     res.send({err: 'Story not found'})
